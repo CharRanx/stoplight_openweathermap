@@ -18,7 +18,74 @@ paths:
   /weather:
     get:
       summary: Your GET endpoint
-      responses: {}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  coord:
+                    type: object
+                    properties:
+                      lon:
+                        type: number
+                      lat:
+                        type: number
+                  cod:
+                    type: number
+                  name:
+                    type: string
+                  id:
+                    type: number
+                  timezone:
+                    type: number
+                  weather:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        id:
+                          type: number
+                        main:
+                          type: string
+                        description:
+                          type: string
+                        icon:
+                          type: string
+            application/xml:
+              schema:
+                type: object
+                properties: {}
+            multipart/form-data:
+              schema:
+                type: object
+                properties: {}
+            text/html:
+              schema:
+                type: object
+              examples: {}
+            text/plain:
+              schema:
+                type: object
+                properties: {}
+            application/EDI-X12:
+              schema:
+                type: object
+                properties: {}
+            application/EDIFACT:
+              schema:
+                type: object
+                properties: {}
+            application/atom+xml:
+              schema:
+                type: object
+                properties: {}
+            application/font-woff:
+              schema:
+                type: object
+                properties: {}
       operationId: get-weather
       tags:
         - weather endpoint
