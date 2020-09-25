@@ -54,6 +54,21 @@ paths:
                           type: string
                         icon:
                           type: string
+              examples:
+                example-1:
+                  value:
+                    coord:
+                      lon: 0
+                      lat: 0
+                    cod: 0
+                    name: string
+                    id: 0
+                    timezone: 0
+                    weather:
+                      - id: 0
+                        main: string
+                        description: string
+                        icon: string
             application/xml:
               schema:
                 type: object
